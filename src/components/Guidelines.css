@@ -1,0 +1,66 @@
+.guidelines {
+    padding: 30px;
+    background-color: #f9f9f9;
+  }
+  
+  .guidelines h1 {
+    font-size: 2.5rem;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .guidelines p {
+    font-size: 1.2rem;
+    color: #555555;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .guidelines-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card h3 {
+    font-size: 1.8rem;
+    color: #333333;
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card .btn {
+    padding: 10px 20px;
+    background-color: #34c759;
+    color: #ffffff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card .btn:hover {
+    background-color: #28a745;
+  }
+  

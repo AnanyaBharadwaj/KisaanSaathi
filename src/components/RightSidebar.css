@@ -1,0 +1,50 @@
+/* src/components/RightSidebar.css */
+
+.right-sidebar {
+    padding: 20px;
+    background-color: #f9f2f2; /* Light red background */
+    box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 300px; /* Maximum width for larger screens */
+    flex: 0 0 auto; /* Prevents it from growing */
+    overflow-y: auto; /* Ensure the content doesn't overflow */
+    height: 400px; /* Limit the height to fit the 6 news items */
+}
+
+.right-sidebar h3 {
+    margin-bottom: 15px;
+    color: #cc0000; /* Darker red for the heading */
+    font-size: 20px;
+}
+
+.right-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.right-sidebar li {
+    margin-bottom: 10px;
+}
+
+.right-sidebar a {
+    text-decoration: none;
+    color: #cc0000; /* Darker red for links */
+    font-size: 16px; /* Adjust font size for readability */
+}
+
+.right-sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .right-sidebar {
+        max-width: 100%; /* Full width on smaller screens */
+        margin-top: 20px; /* Add some spacing on top */
+        padding: 15px; /* Adjust padding for smaller screens */
+        box-shadow: none; /* Optional: remove shadow for mobile */
+        border-radius: 0; /* Optional: remove rounded corners for mobile */
+        background-color: #f3f0f0; /* Keep the same light red background */
+        height: auto; /* Allow height to adjust on mobile */
+    }
+}

@@ -1,0 +1,505 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* src/App.css */
+
+/* General Body and Font */
+/* src/App.css */
+
+/* General Body and Font */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top Header */
+/* Top Header Styles */
+/* Header Container */
+.top-header {
+  background: linear-gradient(to right, orange, green); /* Orange to green gradient */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  height: 60px; /* Fixed height for consistent layout */
+  color: white; /* White text for all content */
+  font-family: Arial, sans-serif;
+}
+
+/* Left Section (Flag) */
+.header-left .flag-icon {
+  width: 70px;
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Spacing between flag and other elements */
+}
+
+/* Center Section (Kissan Sathi) */
+.header-middle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Center align text */
+  font-size: 2em; /* Font size for better readability */
+  font-weight:100px;
+  text-align: center;
+  white-space: nowrap; /* Prevent wrapping */
+  font-family:'Times New Roman', Times, serif;
+}
+
+/* Right Section */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spacing between elements */
+}
+
+/* Azadi Ka Amrit Mahotsav Text */
+.header-right span {
+  font-size: 2em;
+  margin-right: 10px;
+}
+
+/* Language Selector */
+.language-selector {
+  padding: 5px 8px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.language-selector option {
+  color: black; /* Black text for dropdown options */
+  background-color: white;
+}
+
+/* Search Bar */
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  justify-content: flex-end; /* Align the search bar to the right */
+  align-items: center; /* Vertically align search bar */
+  margin-top: 0px; /* Remove margin from top */
+}
+
+.search-bar input {
+  padding: 5px 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  width: 150px;
+  margin-right: 5px; /* Space between input and button */
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #3498db; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  margin-top: 0px; /* Keep button aligned with input */
+}
+
+.search-bar button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-header {
+    flex-wrap: wrap;
+    height: auto; /* Allow dynamic height for small screens */
+    padding: 10px;
+  }
+
+  .header-middle {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .search-bar input {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .search-bar button {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+/* Navbar Container */
+.navbar {
+  background-color: #34495e; /* Dark blue background */
+  display: flex; /* Make navbar a flex container */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Vertically align items in the center */
+  padding: 5px 20px; /* Adjust padding to reduce navbar height */
+}
+
+/* Navbar Menu */
+.navbar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; /* Distribute items evenly */
+  align-items: center;
+}
+
+/* Navbar Items */
+.navbar-item {
+  color: white; /* White text color */
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 8px 15px; /* Adjust padding to decrease height of each item */
+  text-align: center;
+}
+
+.navbar-item:hover {
+  background-color: #4b7a5f; /* Light green background on hover */
+  color: white; /* Ensure text remains white */
+  border-radius: 4px;
+}
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column; /* Stack items vertically */
+    align-items: normal;
+  }
+
+  .navbar-item {
+    width: 80%; /* Full width for items */
+    margin: 10px 5px;
+  }
+}
+
+
+
+
+/* Filter Bar */
+/* Filter Bar */
+.filter-bar {
+  background-color: #f8f8f8; /* Match light background */
+  padding: 50px;
+  margin: 0; /* Remove additional spacing */
+  border-radius: 0; /* No rounded corners */
+  box-shadow: none; /* Remove box shadow */
+}
+
+/* Form Layout */
+.filter-bar form {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 10px; /* Compact spacing between elements */
+  align-items: center;
+  justify-content: flex-start; /* Align to the left */
+}
+
+/* Select and Input Styles */
+.filter-bar form select,
+.filter-bar form input[type="date"] {
+  padding: 3px 5px; /* Compact padding */
+  font-size: 20px; /* Match smaller font size */
+  border: 1px solid #ccc;
+  border-radius: 2px; /* Minimal border radius */
+  width: auto; /* Auto width for better fit */
+  height: 30px; /* Adjust height to match */
+}
+
+/* Button Styles */
+.filter-bar form button {
+  background-color: #28a745; /* Match green button */
+  color: white;
+  padding: 0 15px; /* Adjust padding for size */
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: px;
+  height: 30px; /* Match height with inputs */
+  width: auto; /* No fixed width */
+}
+
+.filter-bar form button:hover {
+  background-color: #218838; /* Slightly darker green */
+}
+
+.filter-bar form button:active {
+  background-color: #1e7e34;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .filter-bar form {
+    flex-wrap: wrap;
+    gap: 10px; /* Increase gap for smaller screens */
+  }
+
+  .filter-bar form select,
+  .filter-bar form input[type="date"],
+  .filter-bar form button {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+
+/* Price Results */
+.price-results {
+  margin: 100px;
+  padding: 40px;
+  border: 4px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.price-results h2 {
+  margin-bottom: 200px;
+  font-size: 1.5em;
+  color: #333;
+  text-align: center;
+}
+
+.price-results p {
+  font-size: 1.2em;
+  color: #555;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Navbar Styles */
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-item {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #333;
+}
+
+/* Hamburger Icon */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Mobile Menu Styles */
+.navbar-menu.active {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #333;
+  width: 200px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-menu li {
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .search-bar input {
+    width: calc(100% - 100px); /* Full width for small screen */
+  }
+
+  .search-bar button {
+    width: 80px;
+  }
+}
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjs7QUFFaEIsMEJBQTBCO0FBQzFCLGdCQUFnQjs7QUFFaEIsMEJBQTBCO0FBQzFCO0VBQ0UsOEJBQThCO0VBQzlCLFNBQVM7RUFDVCxVQUFVO0FBQ1o7O0FBRUEsZUFBZTtBQUNmO0VBQ0Usb0RBQW9EO0VBQ3BELGFBQWE7RUFDYiw4QkFBOEI7RUFDOUIsbUJBQW1CO0VBQ25CLGtCQUFrQjtFQUNsQixrQkFBa0IsRUFBRSxhQUFhO0FBQ25DOztBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7QUFDZDs7QUFFQTtFQUNFLFlBQVk7RUFDWixhQUFhO0VBQ2IsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQSwyQkFBMkI7QUFDM0I7RUFDRSxrQkFBa0IsRUFBRSxhQUFhO0VBQ2pDLFNBQVMsRUFBRSxhQUFhO0VBQ3hCLDJCQUEyQixFQUFFLGFBQWE7RUFDMUMsWUFBWTtBQUNkOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFNBQVM7QUFDWDs7QUFFQSxvQkFBb0I7QUFDcEI7RUFDRSx5QkFBeUI7RUFDekIsYUFBYTtFQUNiLDhCQUE4QjtFQUM5QixtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFNBQVM7RUFDVCxVQUFVO0VBQ1YsYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixxQkFBcUI7RUFDckIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixjQUFjO0VBQ2Qsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLGNBQWM7RUFDZCx5QkFBeUI7RUFDekIsWUFBWTtFQUNaLFlBQVk7RUFDWixlQUFlO0FBQ2pCOztBQUVBLGVBQWU7QUFDZjtFQUNFLHlCQUF5QjtFQUN6QixhQUFhO0VBQ2IsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGFBQWE7RUFDYixlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsWUFBWTtBQUNkOztBQUVBOzs7RUFHRSxXQUFXO0VBQ1gsWUFBWTtFQUNaLGNBQWM7RUFDZCxzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsWUFBWTtFQUNaLFlBQVk7RUFDWixlQUFlO0FBQ2pCOztBQUVBLGtCQUFrQjtBQUNsQjtFQUNFLGFBQWE7RUFDYixhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLHlCQUF5QjtFQUN6Qix3Q0FBd0M7RUFDeEMsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0Usb0JBQW9CO0VBQ3BCLGdCQUFnQjtFQUNoQixXQUFXO0VBQ1gsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCxrQkFBa0I7QUFDcEIiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBzcmMvQXBwLmNzcyAqL1xuXG4vKiBHZW5lcmFsIEJvZHkgYW5kIEZvbnQgKi9cbi8qIHNyYy9BcHAuY3NzICovXG5cbi8qIEdlbmVyYWwgQm9keSBhbmQgRm9udCAqL1xuYm9keSB7XG4gIGZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjtcbiAgbWFyZ2luOiAwO1xuICBwYWRkaW5nOiAwO1xufVxuXG4vKiBUb3AgSGVhZGVyICovXG4udG9wLWhlYWRlciB7XG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCwgb3JhbmdlLCBncmVlbik7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgcGFkZGluZzogMTBweCAyMHB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7IC8qIEFkZCB0aGlzICovXG59XG5cbi50b3AtaGVhZGVyIGltZyB7XG4gIHdpZHRoOiA1MHB4O1xuICBoZWlnaHQ6IDUwcHg7XG59XG5cbi50b3AtaGVhZGVyIC5oZWFkZXItY29udGVudCB7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLnRvcC1oZWFkZXIgaDEge1xuICBtYXJnaW4tcmlnaHQ6IDIwcHg7XG4gIGZvbnQtc2l6ZTogMS41ZW07XG59XG5cbi5sYW5ndWFnZS1zZWxlY3RvciB7XG4gIHBhZGRpbmc6IDVweDtcbn1cblxuLyogQ2VudGVyZWQgSGVhZGVyIE1pZGRsZSAqL1xuLmhlYWRlci1taWRkbGUge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7IC8qIEFkZCB0aGlzICovXG4gIGxlZnQ6IDUwJTsgLyogQWRkIHRoaXMgKi9cbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpOyAvKiBBZGQgdGhpcyAqL1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5oZWFkZXItbWlkZGxlIGgxIHtcbiAgZm9udC1zaXplOiAxLjhlbTtcbiAgbWFyZ2luOiAwO1xufVxuXG4vKiBNYWluIE5hdmlnYXRpb24gKi9cbi5uYXZiYXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMmMzZTUwO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHBhZGRpbmc6IDEwcHggMjBweDtcbn1cblxuLm5hdmJhciB1bCB7XG4gIGxpc3Qtc3R5bGU6IG5vbmU7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzogMDtcbiAgZGlzcGxheTogZmxleDtcbn1cblxuLm5hdmJhciB1bCBsaSB7XG4gIG1hcmdpbjogMCAxNXB4O1xufVxuXG4ubmF2YmFyIHVsIGxpIGEge1xuICBjb2xvcjogd2hpdGU7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgZm9udC1zaXplOiAxLjJlbTtcbn1cblxuLm5hdmJhciAuc2VhcmNoLWJhciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5uYXZiYXIgLnNlYXJjaC1iYXIgaW5wdXQge1xuICBwYWRkaW5nOiA1cHg7XG4gIGZvbnQtc2l6ZTogMWVtO1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG5cbi5uYXZiYXIgLnNlYXJjaC1iYXIgYnV0dG9uIHtcbiAgcGFkZGluZzogNXB4IDE1cHg7XG4gIGZvbnQtc2l6ZTogMWVtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzQ5OGRiO1xuICBjb2xvcjogd2hpdGU7XG4gIGJvcmRlcjogbm9uZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4vKiBGaWx0ZXIgQmFyICovXG4uZmlsdGVyLWJhciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlY2YwZjE7XG4gIHBhZGRpbmc6IDIwcHg7XG4gIG1hcmdpbjogMjBweCAwO1xufVxuXG4uZmlsdGVyLWJhciBmb3JtIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xufVxuXG4uZmlsdGVyLWJhciBmb3JtIGxhYmVsIHtcbiAgbWFyZ2luOiAxMHB4O1xufVxuXG4uZmlsdGVyLWJhciBmb3JtIHNlbGVjdCxcbi5maWx0ZXItYmFyIGZvcm0gaW5wdXQsXG4uZmlsdGVyLWJhciBmb3JtIGJ1dHRvbiB7XG4gIG1hcmdpbjogNXB4O1xuICBwYWRkaW5nOiA1cHg7XG4gIGZvbnQtc2l6ZTogMWVtO1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xufVxuXG4uZmlsdGVyLWJhciBmb3JtIGJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMyN2FlNjA7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiBub25lO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi8qIFByaWNlIFJlc3VsdHMgKi9cbi5wcmljZS1yZXN1bHRzIHtcbiAgbWFyZ2luOiAxMDBweDtcbiAgcGFkZGluZzogNDBweDtcbiAgYm9yZGVyOiA0cHggc29saWQgI2NjYztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y5ZjlmOTtcbiAgYm94LXNoYWRvdzogMCA0cHggOHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgYm9yZGVyLXJhZGl1czogOHB4O1xufVxuXG4ucHJpY2UtcmVzdWx0cyBoMiB7XG4gIG1hcmdpbi1ib3R0b206IDIwMHB4O1xuICBmb250LXNpemU6IDEuNWVtO1xuICBjb2xvcjogIzMzMztcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4ucHJpY2UtcmVzdWx0cyBwIHtcbiAgZm9udC1zaXplOiAxLjJlbTtcbiAgY29sb3I6ICM1NTU7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */
+
+
+/* src/App.css */
+
+/* Ensure the entire app spans the full height of the viewport */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the app takes at least full viewport height */
+}
+
+/* Flex layout for content */
+.content {
+  display: flex;
+  flex: 1; /* Allows this section to grow and fill available space */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px; /* Fixed width for left sidebar */
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Main content section styling */
+.main-section {
+  flex: 1; /* Allows this section to grow and fill available space */
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* Right Sidebar container styling */
+.right-sidebar-container {
+  width: 300px; /* Fixed width for right sidebar */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack sidebars and main content vertically */
+    }
+
+    .sidebar {
+        width: auto; /* Allow sidebar to take full width on small screens */
+        margin-bottom: 20px; /* Add space below sidebar */
+    }
+
+    .main-section {
+        width: auto; /* Allow main section to take full width on small screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .right-sidebar-container {
+        width: auto; /* Allow right sidebar to take full width on small screens */
+        margin-top: 20px; /* Add space above right sidebar */
+    }
+}

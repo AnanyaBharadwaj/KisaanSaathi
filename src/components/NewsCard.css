@@ -1,0 +1,59 @@
+/* src/components/NewsCard.css */
+.news-card {
+    background-color: #f0f0f0; /* Light Grey */
+    padding: 20px;
+    width: 300px; /* Increased width */
+    height: 100%; /* Full height */
+    position: sticky; /* Stay fixed while scrolling */
+    top: 0; /* Stick to the top */
+    box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .news-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .news-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .news-card ul li {
+    margin-bottom: 15px;
+  }
+  
+  .news-card ul li a {
+    text-decoration: none;
+    color: #333; /* Dark grey text */
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+  }
+  
+  .news-card ul li a:hover {
+    color: #006400; /* Dark Green */
+    font-weight: bold;
+  }
+  
+  /* For news card items */
+  .news-card-item {
+    padding: 10px 0;
+    font-size: 16px;
+    color: #494848;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+  }
+  
+  .news-card-item:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 80%; /* Line width less than container */
+    height: 1px;
+    background-color: #ccc; /* Light grey line */
+    margin: 10px auto 0; /* Centered with space above */
+  }
+  

@@ -1,0 +1,195 @@
+/* header.css */
+
+.top-header {
+    background: linear-gradient(to right, green, orange); /* Orange to green gradient */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 50px; /* Reduced padding for smaller screens */
+    position: relative;
+    height: auto; /* Allow height to adjust based on content */
+    color: white; /* White text for all content */
+    font-family: Arial, sans-serif;
+}
+
+/* Left Section (Flag) */
+.header-left .flag-icon {
+    width: 70px;
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Spacing between flag and other elements */
+}
+
+/* Center Section (Kissan Sathi) */
+.header-middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center align text */
+    font-size: 2em; /* Font size for better readability */
+    font-weight: 100; /* Corrected font-weight value */
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Center Section (Website Logo) */
+.website-logo {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center the logo and text */
+    gap: 10px; /* Spacing between logo and name */
+}
+
+.website-logo img {
+    width: 80px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.website-name {
+    font-size: 1.5em;
+    color: white; /* Match the color scheme */
+    margin: 0; /* Remove default paragraph margin */
+}
+
+/* Right Section (Font controls and Language selector) */
+.header-right {
+    display: flex;
+    justify-content: flex-end; /* Align the items to the right */
+    align-items: center;
+    gap: 10px; /* Space between font controls and language selector */
+    flex-grow: 1; /* Ensures header-right takes remaining space */
+}
+
+/* Font control buttons */
+.font-controls {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+}
+
+.font-button {
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #fcf7f7;
+    border: 1px solid #eee5e5;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.language-selector {
+    padding: 5px 8px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Responsive Styles */
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    
+   .top-header {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: center; /* Center align items in mobile view */
+        padding: 20px; /* Adjust padding for mobile view */
+   }
+
+   .header-middle {
+        position:absolute; 
+        left:auto; 
+        transform:none; 
+        text-align:center; 
+        
+        margin-bottom:.5em; /* Space below the header middle section on mobile */ 
+   }
+
+   .website-name {
+        font-size: 1.5em; /* Smaller font size on mobile for better readability */
+   }
+
+   .header-right {
+        justify-content:center; /* Center items in header-right on mobile */ 
+        width:auto; 
+        margin-top:.5em; /* Add space above header-right section */ 
+   }
+
+   .font-controls {
+       gap:.5em; /* Adjust gap between buttons for better spacing on mobile */ 
+   }
+
+   .font-button, .language-selector {
+       font-size:.9em; /* Smaller button text on mobile */ 
+       padding:.3em .5em; /* Adjust padding for buttons on mobile */ 
+   }
+}
+
+/* For larger screens (laptops and above) - Optional adjustments can be made here if necessary */
+
+@media (min-width: 769px) {
+   .font-controls {
+      margin-bottom:.5em;
+   }
+}
+
+
+/* src/App.css */
+
+/* Ensure the entire app spans the full height of the viewport */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Grid layout for the main content */
+.main-container {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 250px 1fr; /* Sidebar takes 250px; content takes remaining space */
+  grid-template-rows: auto; /* Height adjusts dynamically based on content */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 20%;
+  background-color: #f2f2f2;
+  padding: 10px;
+  height: calc(100vh - 200px); /* Adjust based on header and footer height */
+}
+
+/* Features section styling */
+.features-section {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Flex layout for content */
+.content {
+  display: flex;
+  align-items: flex-start; /* Aligns the sidebar and content at the top */
+  justify-content: space-between; /* Adds space between main content and NewsCard */
+}
+
+/* Main content section styling */
+.main-section {
+  width: 80%;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* NewsCard container on the right side */
+.news-card-container {
+  width: 300px; /* Adjust width to your desired size */
+  position: sticky; /* Fixes it while scrolling */
+  top: 100px; /* Adds a top margin (adjust as needed) */
+  height: calc(100vh - 100px); /* Full height minus space for header/footer */
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for separation */
+  border-radius: 8px; /* Optional: adds rounded corners */
+}
+

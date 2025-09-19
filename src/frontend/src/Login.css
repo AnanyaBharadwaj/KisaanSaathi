@@ -1,0 +1,220 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Combined Header */
+.combined-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Top Bar (Thin White Bar) */
+.header-top {
+  background-color: white;
+  color: black;
+  padding: 5px 20px; /* Increased padding for better visibility */
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top .goi a {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  font-size: var(--base-font-size, 14px); /* Increased font size */
+}
+
+.header-top .goi img {
+  width: 30px; /* Slightly larger logo */
+  margin-right: 8px;
+}
+
+.header-top .text-size-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Increased gap between controls */
+  justify-content: flex-end; 
+}
+
+.header-top .text-size-controls .button-native {
+  background-color: #003300;
+  color: white;
+  border: none;
+  padding: 5px 10px; /* Increased button padding */
+  cursor: pointer;
+  font-size: var(--base-font-size, 14px); /* Increased font size */
+}
+
+.header-top .text-size-controls .button-native:hover {
+  background-color: #003300;
+}
+
+.header-top .text-size-controls .language-selector {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 5px; /* Increased padding */
+  color: black;
+  cursor: pointer;
+  font-size: var(--base-font-size, 14px); /* Increased font size */
+}
+
+/* Blue Header */
+.header {
+  background-color: #003300;
+  color: white;
+  padding: 25px 0; /* Increased padding */
+  text-align: left;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  padding-left: 25px; /* More padding for larger screens */
+}
+
+.login-logo {
+  width: 50px; /* Larger logo */
+  margin-right: 12px; /* Increased space between logo and text */
+}
+
+/* Login Page */
+.login-page {
+  padding-top: 140px; /* Adjusted for fixed headers */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Login Container */
+.login-container {
+  background: white;
+  border-radius: 8px;
+  padding: 40px; /* Increased padding */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Increased max-width */
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Form Styling */
+.login-form .form-group {
+  margin-top: 25px; /* Increased spacing */
+  margin-bottom: 18px; /* Increased spacing */
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px; /* Increased label margin */
+  color: #555;
+  font-size: 16px; /* Increased label font size */
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px; /* Increased input padding */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px; /* Increased input font size */
+  color: #333;
+}
+
+/* Password Wrapper */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 45px; /* Increased space for the eye icon */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px; /* Increased icon size */
+  cursor: pointer;
+  color: #555;
+}
+
+.eye-icon:hover {
+  color: #003300;
+}
+
+/* Buttons */
+.login-button {
+  width: 100%;
+  padding: 12px; /* Increased button padding */
+  background-color: #003300;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Increased margin */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:hover {
+  background-color: #003300;
+}
+
+/* Validation Message Styling */
+.login-message {
+  margin-top: 15px; /* Increased margin */
+  text-align: center;
+}
+
+.login-message.error {
+  color: red;
+}
+
+.login-message.success {
+  color: green;
+}
+
+.login-footer {
+  margin-top: 15px; /* Increased margin */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .login-container {
+      width: 90%;
+  }
+
+  .header-content {
+      padding-left: 10px;
+  }
+
+  .header h1 {
+      font-size: 22px;
+  }
+}
+
