@@ -1,0 +1,145 @@
+/* Blue Header */
+.header {
+    background-color: #003300;
+    color: white;
+    padding: 35px 0; /* Increased padding for a larger header */
+    text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);    
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding-left: 30px; /* Increased padding for more space */
+}
+
+.signup-logo {
+    width: 60px; /* Larger logo */
+    margin-right: 15px; /* More space between logo and text */
+}
+
+.header h1 {
+    font-size: 28px; /* Increased font size for header text */
+    font-weight: bold; /* Make the text bolder */
+}
+
+/* Signup Page */
+.signup-page {
+    padding-top: 150px; /* Space for fixed headers, increased top padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Signup Container */
+.signup-container {
+    background: white;
+    border-radius: 8px;
+    padding: 30px; /* Increased padding */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Larger container width */
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 16px; /* Larger base font size */
+    margin-top: 20px;
+}
+
+/* Form Styling */
+.signup-form .form-group {
+    margin-top: 25px; /* Increased margin */
+    margin-bottom: 20px; /* Increased margin */
+    text-align: left;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 10px; /* Increased space between label and input */
+    color: #555;
+    font-size: 16px; /* Larger font size */
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Slightly larger border radius */
+    font-size: 16px; /* Larger font size */
+    color: #333;
+}
+
+/* Password Wrapper */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 50px; /* More space for the eye icon */
+    font-size: 16px; /* Larger font size */
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px; /* Larger eye icon */
+    cursor: pointer;
+    color: #555;
+}
+
+.eye-icon:hover {
+    color: #003300;
+}
+
+/* Buttons */
+.signup-button {
+    width: 100%;
+    padding: 12px; /* Larger button padding */
+    background-color: #003300;
+    color: white;
+    font-size: 16px; /* Larger font size */
+    border: none;
+    border-radius: 8px; /* Larger border radius */
+    cursor: pointer;
+    margin-bottom: 12px; /* Increased bottom margin */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.signup-button:hover {
+    background-color: #003300;
+}
+
+/* Validation Message Styling */
+.signup-message {
+    margin-top: 20px; /* Increased margin */
+    text-align: center;
+    font-size: 16px; /* Larger font size */
+}
+
+.signup-message.error {
+    color: red;
+}
+
+.signup-message.success {
+    color: green;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .signup-container {
+        width: 90%;
+    }
+
+    .header-content {
+        padding-left: 10px;
+    }
+
+    .header h1 {
+        font-size: 24px; /* Slightly larger font size for header */
+    }
+}
